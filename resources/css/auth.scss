@@ -1,0 +1,294 @@
+@use 'app';
+@use 'header';
+@use 'footer';
+@use 'popup';
+@use 'form';
+
+footer {
+	margin-top: 0;
+}
+.auth {
+	padding: 60px 0 100px 0;
+	background: #f5f5f5;
+	
+	.title {
+		margin-bottom: 45px;	
+	}
+	
+	&__alt {
+		margin: 35px 0 0 0;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: rgba(55, 63, 79, 0.5);
+		
+		a {
+			color: #FE2047;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+	.login {
+		&__wrapper {
+			width: 28%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.input {
+			margin-bottom: 14px;
+		}
+		.forgot {
+			margin-bottom: 26px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: right;
+			a {
+				color: rgba(55, 63, 79, 0.5);
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
+	.register {
+		&__wrapper {
+			width: 80%;
+			margin: 0 auto;
+			padding: 36px 0 46px 0;
+			background: #FFFFFF;
+			border: 1px solid #E9E9E9;
+			box-sizing: border-box;
+			box-shadow: -8px -8px 30px rgba(255, 255, 255, 0.5), 8px 8px 30px rgba(55, 63, 79, 0.15);
+			border-radius: 5px;
+			text-align: center;
+		}
+		&__title {
+			font-weight: bold;
+			font-size: 22px;
+			line-height: 100%;
+			text-align: center;
+		}
+		&__desc {
+			width: 70%;
+			margin: 10px auto 35px auto;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+			letter-spacing: -0.04em;
+			color: #373F4F;
+			opacity: 0.7;
+		}
+		&__agreement {
+			position: relative;
+			font-weight: 400;
+			text-align: left;
+			line-height: 20px;
+			p {
+				display: inline;
+				opacity: 0.7;
+			}
+			.error__info {
+				left: -30px;
+				top: -3px;
+			}
+			.error__text {
+				left: -40px;
+				bottom: calc(100% + 13px);
+			}
+		}
+
+		&__terms {
+			opacity: 0.7;
+			width: 80%;
+			margin: 0 auto;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: -0.04em;
+		}
+
+		a {
+			color: #FE2047;
+			transition: opacity .3s;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		
+		form { 
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+			
+			button {
+				margin-top:36px;
+			}
+		}
+		
+		.card {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			width: 90%;
+			margin: 0 auto;
+			
+			&__wrapper {
+				width: 50%;
+				
+				.jp-card-container {
+					width: initial;
+					height: 259px;
+				}
+				.jp-card .jp-card-back, .jp-card .jp-card-front {
+					background: #fff;
+					box-shadow: -15px -15px 25px #F8F8F8, 15px 15px 25px rgba(0, 0, 0, 0.1);
+					border-radius: 11px;
+					border: 2px solid #F0F0F0;
+				}
+				.jp-card .jp-card-back .jp-card-display, 
+				.jp-card .jp-card-front .jp-card-display {
+					color: rgba(55, 63, 79, 0.5);
+					opacity: 1;
+					
+					&.jp-card-valid {
+						color: #373F4F;
+					}
+				}
+				.jp-card .jp-card-front .jp-card-lower .jp-card-number {
+					margin-bottom: 40px;
+					text-align: left;
+				}
+				.jp-card-lower .jp-card-expiry:before {
+					color: #373F4F;
+				}
+				.jp-card .jp-card-front .jp-card-lower .jp-card-expiry:after, .jp-card .jp-card-front .jp-card-lower .jp-card-expiry:before {
+					opacity: 1;
+				}
+				.jp-card .jp-card-back .jp-card-shiny, 
+				.jp-card .jp-card-front .jp-card-shiny {
+					width: 59.4px;
+					height: 41.58px;
+					margin-bottom: 20px;
+					background: #F5F5F5;
+				    border: 2px solid #FFFFFF;
+				    box-sizing: border-box;
+				    box-shadow: inset -2px -2px 5px #ffffff, inset 2px 2px 6px rgba(0,0,0, 0.05);
+				    filter: blur(0.5px);
+				    border-radius: 5px;
+				}
+				.jp-card .jp-card-back .jp-card-shiny:before, 
+				.jp-card .jp-card-front .jp-card-shiny:before {
+					width: 41.58px;
+					height: 24.95px;
+					background: linear-gradient(109.8deg, #FFCD1C 0%, #FFECD0 35.94%, #FFCD1C 100%), #777777;
+					border: 1px solid #FFFFFF;
+					box-sizing: border-box;
+					box-shadow: inset 2px 2px 6px rgba(0,0,0, 0.05);
+					filter: blur(0.5px);
+					border-radius: 0 5px 5px 0;
+				}
+			}
+			&__form {
+				margin-left: 50px;
+				width: calc(50% - 50px);
+				
+				form {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}	
+}
+@media screen and (max-width: 1025px) {
+	.auth {
+		.login {
+			&__wrapper {
+				width: 50%;
+			}
+		}
+		.register {
+			&__wrapper {
+				width: 100%;
+			}
+			form {
+				width: 80%;
+			}
+			.card {
+				flex-direction: column;
+				align-items: center;
+				
+				&__wrapper {
+					width: 70%;
+				}
+				&__form {
+					width: 70%;
+					margin: 30px 0 0 0;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 533px) {
+	.auth {
+		&__alt {
+			width: 70%;
+			margin: 35px auto 0 auto;
+		}
+		.login {
+			&__wrapper {
+				width: 100%;
+			}
+		}
+		.register {
+			&__wrapper {
+				width: 100%;
+			}
+			&__title {
+				font-size: 16px;
+			}
+			&__desc {
+				width: 90%;
+				font-size: 12px;
+			}
+			&__terms {
+				width: 90%;
+				font-size: 12px;
+			}
+			form {
+				width: 80%;
+				button {
+					margin-top: 10px;
+				}
+			}
+			.card {
+				&__wrapper {
+					width: 100%;
+					
+					.jp-card {
+						min-width: initial;
+					}
+					.jp-card-container {
+						height: 180px;
+					}
+					.jp-card .jp-card-front .jp-card-lower .jp-card-number {
+						margin-bottom: 20px;
+					}
+					.jp-card .jp-card-back .jp-card-shiny, 
+					.jp-card .jp-card-front .jp-card-shiny {
+						margin-bottom: 0;
+					}
+				}
+				&__form {
+					width: 100%;
+					margin: 30px 0 0 0;
+				}
+			}
+		}
+	}
+}

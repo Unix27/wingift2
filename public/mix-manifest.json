@@ -1,0 +1,12 @@
+{
+    "/js/index/index.js": "/js/index/index.js",
+    "/js/courses/courses.js": "/js/courses/courses.js",
+    "/js/app.js": "/js/app.js",
+    "/js/manifest.js": "/js/manifest.js",
+    "/css/account.css": "/css/account.css",
+    "/css/course.css": "/css/course.css",
+    "/css/courses.css": "/css/courses.css",
+    "/css/welcome.css": "/css/welcome.css",
+    "/css/auth.css": "/css/auth.css",
+    "/js/auth/register.js": "/js/auth/register.js"
+}

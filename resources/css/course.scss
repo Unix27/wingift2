@@ -1,0 +1,236 @@
+@use 'app';
+@use 'header';
+@use 'footer';
+@use 'popup';
+@use 'form';
+
+body {
+	background: #F5F5F5;
+}
+
+.course {
+	margin-top: 80px;
+	&__header {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 232px;
+		padding: 0 40px;
+		background: linear-gradient(102.15deg, #E8C1FF 0%, #7DC1FF 100%, #AAD6FF 100%);
+		border: 2px solid #FFFFFF;
+		box-sizing: border-box;
+		border-radius: 5px;
+
+		&_theme {
+			margin-bottom: 16px;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 100%;
+		}
+		&_title {
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 100%;
+		}
+
+        &_rating {
+            display: block;
+            position: absolute;
+            top: 25px;
+	    right: 25px;
+
+            img {
+                width: 100px;
+            }
+        }
+
+    }
+	&__tab {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		margin-top: 50px;
+		border-bottom: 1px solid #C4C4C4;
+
+		a {
+			display: inline-block;
+			padding: 28px 0;
+			border-bottom: 5px solid #F5F5F5;
+			color: rgba(55, 63, 79, 0.7);
+			font-weight: bold;
+			font-size: 22px;
+
+			&:first-child {
+				margin-right: 56px;
+			}
+
+			&:hover {
+				color: #FE2047;
+				border-bottom: 5px solid #FE2047;
+			}
+
+			sup {
+				color: #FE2047;
+			}
+		}
+	}
+	&__content {
+		padding: 92px 0 60px 0;
+		text-align: center;
+
+		.title {
+			margin: 0 0 10px 0;
+		}
+		&_text {
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: -0.04em;
+			opacity: 0.7;
+		}
+	}
+	&__advantages {
+		// ABOUT START
+		.about {
+			padding: 1px 0 85px 0;
+			background: #F5F5F5;
+			&__wrapper {
+				.title {
+					margin-bottom: 40px;
+				}
+			}
+			&__texts {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+			}
+			&__item {
+				width: calc(50% - 14px);
+				margin: 0 14px 0 0;
+
+				&:nth-child(2n) {
+					margin-right: 0;
+				}
+				&_icon {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 80px;
+					height: 80px;
+					margin: 0 auto 18px auto;
+					background: #F8F8F8;
+					border: 3px solid #FFFFFF;
+					border-radius: 100%;
+					box-sizing: border-box;
+					box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.05), 5px 5px 20px rgba(0, 0, 0, 0.1), inset 2px 2px 10px rgba(0, 0, 0, 0.05);
+				}
+				&_title {
+					margin-bottom: 8px;
+					font-weight: bold;
+					font-size: 18px;
+					line-height: 100%;
+					text-align: center;
+				}
+				&_desc {
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 19px;
+					text-align: center;
+					letter-spacing: -0.04em;
+					opacity: 0.7;
+				}
+			}
+		}
+		// ABOUT END
+	}
+	&__files {
+		padding: 60px 0 98px 0;
+		border-top: 1px solid #C4C4C4;
+
+		.title {
+			margin: 0;
+		}
+		ul {
+			padding: 0;
+			margin: 45px -54px 0 0;
+			list-style-type: none;
+
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 9px 0;
+				margin: 9px 54px 0 0;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 100%;
+				border-bottom: 1px solid #C4C4C4;
+
+				&:first-child {
+					margin-top: 0;
+				}
+				a {
+					display: inline-flex;
+					align-items: center;
+					color: #FE2047;
+
+					img {
+						margin-right: 9px;
+					}
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1025px) {}
+@media screen and (max-width: 533px) {
+	.course {
+		margin-top: 40px;
+		&__header {
+			height: 128px;
+			&_theme {
+				font-size: 12px;
+			}
+			&_title {
+				font-size: 22px;
+			}
+		}
+		&__tab {
+			margin-top: 20px;
+
+			a {
+				padding: 20px 0;
+				font-size: 14px;
+
+				&:first-child {
+					margin-right: 22px;
+				}
+			}
+		}
+		&__content {
+			padding: 44px 0 22px 0;
+		}
+		&__advantages {
+			// ABOUT START
+			.about {
+				padding: 1px 0 45px 0;
+				&__texts {
+					flex-direction: column;
+				}
+				&__item {
+					width: 100%;
+					margin: 0 0 14px 0;
+				}
+			}
+			// ABOUT END
+		}
+		&__files {
+			padding: 32px 0 52px 0;
+		}
+	}
+
+}
